@@ -37,6 +37,6 @@ merge_data <- function(features, train_data, test_data,
     # Calculate averages
     result <- aggregate(subset[,-(1:3)], list(subset$activity,subset$subject),mean,na.rm=TRUE)
     result <- rename(result, activity=Group.1, subject=Group.2) 
-    write.csv(tbl_df(result), file="final.csv")
+    write.table(tbl_df(result), file="final.txt", row.name=FALSE)
     result
 }
