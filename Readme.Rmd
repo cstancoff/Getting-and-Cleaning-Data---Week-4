@@ -43,3 +43,7 @@ merged <- merge_data(features, train_data, test_data,
                      train_subjects, test_subjects)
 head(merged)
 ```
+
+The accelerometer and gyroscope data was provided in two text files ("X_train.txt" and "X_test.txt") that consisted of `r nrow(train_data)` and `r nrow(test_data)` records respectively, with `r ncol(train_data)` measurements each.  Similarly, two text files ("y_train.txt" and "y_test.txt") provided an activity code for each record and two text files ("subject_train.txt" and "subject_test.txt") provided the subject for each record.  Additionally, a text file ("features.txt") provided a name for each of the measurments.  The files were combined to create one table of size `r nrow(train_data) + nrow(test_data)` x `r ncol(train_data) + 2`.
+
+This table was reduced to just the `r length(c(1,2,grep("*mean\\(|std\\(*",features$V2)+2))` measurements of mean and standard deviation.  Next, a text file ("activity_labels.txt") providing a description for each of the activities was merged with the reduced table and the names for the measurments from "features.txt" was used to provide descriptive names for each of the columns.  Finally, the average of each measurement was calculated for each subject/activity pairing.

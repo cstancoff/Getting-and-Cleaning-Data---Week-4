@@ -18,22 +18,10 @@ From the README.txt included with the original data set:
 > cutoff frequency was used. From each window, a vector of features was
 > obtained by calculating variables from the time and frequency domain."
 
-The accelerometer and gyroscope data was provided in two text files
-("X\_train.txt" and "X\_test.txt") that consisted of 7352 and 2947
-records respectively, with 561 measurements each. Similarly, two text
-files ("y\_train.txt" and "y\_test.txt") provided an activity code for
-each record and two text files ("subject\_train.txt" and
-"subject\_test.txt") provided the subject for each record. Additionally,
-a text file ("features.txt") provided a name for each of the
-measurments. The files were combined to create one table of size 10299 x
-563.
-
-This table was reduced to just the 68 measurements of mean and standard
-deviation. Next, a text file ("activity\_labels.txt") providing a
-description for each of the activities was merged with the reduced table
-and the names for the measurments from "features.txt" was used to
-provide descriptive names for each of the columns. Finally, the average
-of each measurement was calculated for each subject/activity pairing.
+The accelerometer and gyroscope data was combined with the activity,
+subject, and names for each of the measurments and reduced to just the
+measurements of mean and standard deviation. Finally, the average of
+each measurement was calculated for each subject/activity pairing.
 
 The table below gives the name, units, class, range, and description of
 each variable in the final table.
