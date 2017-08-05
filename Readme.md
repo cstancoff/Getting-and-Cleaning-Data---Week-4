@@ -38,7 +38,7 @@ a text file ("features.txt") provided a name for each of the
 measurments. The files were combined to create one table of size 10299 x
 563.
 
-This table was reduced to just the 68 measurements of mean and standard
+This table was reduced to just the 66 measurements of mean and standard
 deviation. Next, a text file ("activity\_labels.txt") providing a
 description for each of the activities was merged with the reduced table
 and the names for the measurments from "features.txt" was used to
